@@ -1,0 +1,94 @@
+﻿<Window x:Class="Educational_calculator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Educational_calculator"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="759" Width="1183">
+    <Grid>
+
+        <Grid.Background>
+            <ImageBrush ImageSource="C:\Users\noyazach\Downloads\WhatsApp Image 2023-12-18 at 15.25.49.jpeg" />
+        </Grid.Background>
+
+
+
+
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50*"/>
+            <RowDefinition Height="167*" />
+        </Grid.RowDefinitions>
+
+
+
+        <TextBlock
+                  x:Name="num1Txt" FontSize="18"
+                  HorizontalAlignment="Left" VerticalAlignment="Top" Height="24" Width="5" Margin="0,2,0,0" Grid.Row="1" />
+
+        <TextBlock Text="Educational calculator" Foreground="SaddleBrown"
+          VerticalAlignment="Center" HorizontalAlignment="Center" 
+          FontSize="55" FontFamily="Kristen ITC" FontWeight="Thin" Height="66" Width="504"/>
+
+        <StackPanel  x:Name="Buttons"  Orientation="Vertical" Margin="0,2,0,0"  Grid.Row="1"   >
+            <Button x:Name="FirstGradeBtn" Height="50" Content="FirstGrade" FontSize="18" Margin="10" Click="FirstGradeBtn_Click" BorderBrush="SaddleBrown" Foreground="SaddleBrown"  Width="291" Background="LightYellow"/>
+            <Button x:Name="SecondGradeBtn" Height="50" Content="SecondGrade" FontSize="18" Margin="10" Click="SecondGradeBtn_Click" BorderBrush="SaddleBrown" Foreground="SaddleBrown" Width="291" Background="LightYellow"/>
+            <Button x:Name="ThirdGradeBtn" Height="50" Content="Third Grade" FontSize="18" Margin="10" Click="ThirdGradeBtn_Click" BorderBrush="SaddleBrown" Width="291" Foreground="SaddleBrown" Background="LightYellow"/>
+            <Button x:Name="FourthGradeBtn" Height="50" Content="Fourth Grade" FontSize="18" Margin="10" Click="ThirdGradeBtn_Click" BorderBrush="SaddleBrown" Width="291" Foreground="SaddleBrown" Background="LightYellow"/>
+
+        </StackPanel>
+
+        <StackPanel x:Name="exercise"     VerticalAlignment="Top" HorizontalAlignment="Center" Height="589" Width="1055" Margin="0,144,0,0" Grid.RowSpan="2" Visibility="Collapsed"  >
+            <TextBlock x:Name="problemTextBlock" Margin="0,0,0,10" HorizontalAlignment="Center"    Foreground="SaddleBrown"  FontWeight="UltraBold"  TextAlignment="Center"  FontSize="50"  FontStyle="Italic" RenderTransformOrigin="0.5,0.5" Width="400" Height="74">
+                <TextBlock.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform ScaleX="1" ScaleY="1"/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </TextBlock.RenderTransform>
+            </TextBlock>
+            <TextBox x:Name="answerTextBox" Width="100" FontSize="50"   />
+            <Button Content="Check Answer" Click="CheckAnswer_Click" Width="394" Background="LightYellow" Foreground="SaddleBrown"/>
+            <Button Content="Generate Problem" Click="GenerateProblemButton_Click" Height="22" RenderTransformOrigin="0.5,0.5" Width="394" Background="LightYellow" Foreground="SaddleBrown">
+                <Button.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="0.212"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Button.RenderTransform>
+            </Button>
+            <TextBlock x:Name="resultTextBlock" FontSize="40"  HorizontalAlignment="Center" FontWeight="UltraBold" Foreground="SaddleBrown" Height="61" Width="508" TextAlignment="Center"/>
+            <Button Content="Complete exam and get the grade" Click="Grade_Click" Height="35" Width="666" RenderTransformOrigin="0.5,0.5"  Background="LightYellow" Foreground="SaddleBrown">
+                <Button.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="-0.026"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Button.RenderTransform>
+            </Button>
+            <TextBlock x:Name="Grade" FontSize="28" Foreground="SaddleBrown" FontWeight="UltraBold" Height="115" Width="1051" Text="" />
+            <TextBlock x:Name="GradePercentage" FontSize="28" Foreground="SaddleBrown" FontWeight="UltraBold"       Height="115" Width="1047" Text=""/>
+
+
+
+
+        </StackPanel>
+
+        <MediaElement x:Name="mediaElement" Source="C:\Users\noyazach\Downloads\__(getmp3.pro).mp3" LoadedBehavior="Manual" />
+        <MediaElement x:Name="erorSound" Source="C:\Users\noyazach\Downloads\Spongebob_Crying_Sound_Effect_(getmp3.pro).mp3" LoadedBehavior="Manual" />
+        <MediaElement x:Name="correctSound" Source="C:\Users\noyazach\Downloads\Spongebob_Laugh_-_Sound_Effect_Pr_(getmp3.pro).wav"
+LoadedBehavior="Manual" />
+        <MediaElement x:Name="YourMediaElement" Source="C:\Users\noyazach\Downloads\ezgif.com-webp-to-mp4-converter.mp4" LoadedBehavior="Manual" Grid.Row="1"  VerticalAlignment="Bottom"  Height="270" Width="600" Margin="40,0,543,10" />
+        <MediaElement x:Name="YourMediaElement2" Source="C:\Users\noyazach\Downloads\ezgif.com-webp-to-mp4-converter (1).mp4" LoadedBehavior="Manual" Grid.Row="1"  VerticalAlignment="Bottom"  Height="270" Width="600" Margin="40,0,543,10" />
+
+
+
+    </Grid>
+</Window>
